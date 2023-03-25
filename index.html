@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exemplo de Pergunta e Resposta</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<h1>Chatarina, qual seu tio preferido?</h1>
+  <div>
+    <form>
+      <label>
+        <input type="text" name="resposta">
+      </label>
+      <button type="button" onclick="verificarResposta()">Responder</button>
+    </form>
+  </div>
+	<h1 id="mensagem"></h1>
+
+	<script>
+		function verificarResposta() {
+			var resposta = document.getElementsByName("resposta")[0].value;
+			if (resposta.toLowerCase() === "rodrigo") {
+				document.getElementById("mensagem").innerHTML = "Parabéns! Você ganhou um vale pix no valor de 100 reais!";
+			} else {
+				document.getElementById("mensagem").innerHTML = "Que pena, tente novamente.";
+			}
+		}
+	</script>
+</body>
+</html>
